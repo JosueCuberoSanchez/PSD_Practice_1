@@ -1,0 +1,27 @@
+{
+  "name": "firstpsd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run clear",
+    "start": "mkdir \"build/\" && cp src/index.html build/ && node-sass src/sass/main.scss build/css/main.css && http-server ./build -s -o",
+    "clear": "rimraf build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosueCuberoSanchez/PSD_Practice_1.git"
+  },
+  "author": "Josué Cubero Sánchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosueCuberoSanchez/PSD_Practice_1/issues"
+  },
+  "homepage": "https://github.com/JosueCuberoSanchez/PSD_Practice_1#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.2",
+    "rimraf": "^2.6.2"
+  }
+}
