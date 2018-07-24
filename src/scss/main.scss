@@ -137,6 +137,43 @@ h6 {
   padding: 0 10% 15px;
 }
 
+.main__row {
+  margin-bottom: 30px;
+}
+
+.main__publish-content-box {
+  background-color: white;
+  padding: 22px 0 27px 8.55%;
+}
+
+.main__publish-content-box--option {
+  margin-right: 8%;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.main__published-content-box {
+  background-color: white;
+}
+
+.main__published-content--upper-info {
+  padding-top: 33px;
+  .row {
+    div {
+      p{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.main__row--main-photo {
+  width: 100%;
+}
+
 /* Media queries for responsiveness */
 
 @media screen and (max-width: 1690px) and (min-width: 992px){
