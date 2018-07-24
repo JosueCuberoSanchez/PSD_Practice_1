@@ -1,10 +1,88 @@
-:root {
-    $padd: 30px;
+$top-padd: 10px;
+
+nav {
+  padding: $top-padd 30px;
+  background-color: #36455b;
 }
 
-body {
-    margin: 0;
-    p {
-        padding: 0;
-    }
+.nav__icon {
+  margin-left: 5%;
+  margin-right: 4.5%;
+}
+
+.search-bar {
+  display: inline-block;
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+  width: 35.5%;
+  height: 55px;
+}
+
+.search-bar input {
+  height: 32px;
+  background-color: #2d3a4e;
+  border: none;
+  text-indent: 43px;
+  width: 100%;
+  margin-top: 10px;
+  color: #c6c6c6;
+}
+
+.search-bar__icon {
+  position: absolute;
+  top: 20px;
+  left: 17px;
+}
+
+::placeholder {
+  color: #c6c6c6;
+}
+
+.nav__menu_icons {
+  margin-top: $top-padd;
+  margin-left: 40%;
+}
+
+.nav__menu-icon {
+  margin-right: 8%;
+}
+
+.nav__pen-box {
+  display: inline-block;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1400px){
+  .nav__menu_icons {
+    margin-left: 20%;
+  }
+  .nav__menu-icon {
+    margin-right: 7%;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .search-bar {
+    width: 237px;
+  }
+  .nav__menu_icons {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .search-bar {
+    width: 190px;
+  }
+  .nav__icon {
+    margin-left: 0;
+  }
+  .nav__menu_icons {
+    margin-left: 0;
+  }
+  .nav__menu-icon {
+    margin-right: 5%;
+  }
 }
