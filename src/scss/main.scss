@@ -1,0 +1,207 @@
+// helpers load first
+//@import "helpers/variables.scss";
+
+// load vendor libs, but just what you need
+@import "vendor/bootstrap-custom";
+
+// load components
+//@import "components/buttons";
+
+// load components
+//@import "pages/home";
+
+
+$left-padd: 5.555%;
+
+/* Nav bar styles */
+
+nav {
+  padding: 21px $left-padd 19px;
+  background-color: #36455b;
+}
+
+.nav__icon {
+  margin-right: 4.5%;
+}
+
+.search-bar {
+  display: inline-block;
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+  width: 35.5%;
+  height: 55px;
+}
+
+.search-bar {
+  input {
+    height: 32px;
+    background-color: #2d3a4e;
+    border: none;
+    text-indent: 43px;
+    width: 100%;
+    margin-top: 10px;
+    color: #c6c6c6;
+  }
+}
+
+.search-bar__icon {
+  position: absolute;
+  top: 20px;
+  left: 17px;
+}
+
+::placeholder {
+  color: #c6c6c6;
+}
+
+.nav__menu_icons {
+  margin-top: 10px;
+  margin-left: 15%;
+}
+
+.nav__menu-icon {
+  margin-right: 8%;
+}
+
+.nav__pen-box {
+  display: inline-block;
+}
+
+/* Main section styles */
+
+main {
+  background-color: #d2dae6;
+  padding: 37px $left-padd 0 9.3%;
+}
+
+.aside__box {
+  background-color: white;
+  margin-left: 15%;
+  margin-bottom: 30px;
+}
+
+h6 {
+  margin-bottom: 0;
+  padding: 28px 11.13% 23px 10%;
+}
+
+.aside__explore-tumblr {
+  padding: 4px 11.13% 24px 10%;
+}
+
+.aside__box {
+  .row {
+    div {
+      padding-right: 0;
+    }
+  }
+}
+
+.aside__profile-picture {
+  padding-top: 8px;
+}
+
+.aside__username {
+  color: #838383;
+  margin-bottom: 0;
+}
+
+.aside__blogname {
+  color: #b5b5b5;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  word-break: break-all
+}
+
+.aside__plus-symbol {
+  padding-left: 3.1%;
+}
+
+.aside__frame {
+  padding: 0 11.13% 20px 10%;
+  border-bottom: 1px #ebebeb solid;
+  margin-bottom: 14px;
+}
+
+.aside__frame--info {
+  padding-left: 0;
+}
+
+.aside__frame--radar {
+  padding: 0 10% 15px;
+}
+
+.aside__box--radar-photo {
+  width: 100%;
+  padding: 0 10% 15px;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1690px) and (min-width: 992px){
+  .nav__menu-icon {
+    margin-right: 2.7%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .nav__menu_icons {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+  .aside__profile-picture {
+    width: 90%;
+    padding-top: 4px;
+  }
+  .aside__username {
+    font-size: 0.8rem;
+  }
+  .aside__blogname {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .search-bar {
+    width: 237px;
+  }
+  .nav__menu_icons {
+    margin-left: 5%;
+  }
+  main {
+    padding-left: 5%;
+  }
+  .aside__box {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .search-bar {
+    width: 190px;
+  }
+  .nav__icon {
+    margin-left: 0;
+  }
+  .nav__menu_icons {
+    margin-left: 0;
+  }
+  .nav__menu-icon {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col-xs-2 {
+    width: 16.666%;
+  }
+  .col-xs-8 {
+    width: 60.666%;
+  }
+  .aside__frame--info {
+    margin-left: 6%;
+  }
+}
