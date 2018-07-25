@@ -1,6 +1,5 @@
 // helpers load first
 //@import "helpers/variables.scss";
-
 // load vendor libs, but just what you need
 @import "vendor/bootstrap-custom";
 
@@ -42,6 +41,7 @@ nav {
 }
 
 .search-bar {
+
   input {
     height: 32px;
     background-color: #2d3a4e;
@@ -92,13 +92,14 @@ main {
   padding-right: 0;
   padding-left: 0;
   width: 14.02%;
+
   img {
     width: 66.666%;
   }
 }
 
 .main__publish-content-box {
-  background-color: white;
+  background-color: #fff;
   padding: 22px 5.5% 27px;
 }
 
@@ -109,6 +110,7 @@ main {
 
 .main__publish-content-box--option {
   text-align: center;
+
   p {
     margin-bottom: 0;
   }
@@ -119,7 +121,7 @@ main {
 }
 
 .main__published-content-box {
-  background-color: white;
+  background-color: #fff;
 }
 
 .main__published-content--info {
@@ -145,7 +147,7 @@ main {
 /* Aside section styles */
 
 .aside__box {
-  background-color: white;
+  background-color: #fff;
   margin-left: 15%;
   margin-bottom: 30px;
 }
@@ -160,7 +162,9 @@ h6 {
 }
 
 .aside__box {
+
   .row {
+
     div {
       padding-right: 0;
     }
@@ -180,7 +184,6 @@ h6 {
   color: #b5b5b5;
   font-size: 0.9rem;
   margin-bottom: 0;
-  word-break: break-all
 }
 
 .aside__plus-symbol {
@@ -214,42 +217,54 @@ h6 {
 /* Media queries for responsiveness */
 
 @media screen and (max-width: 1400px) and (min-width: 992px) {
+
   .aside__profile-picture {
     width: 90%;
     padding-top: 4px;
   }
-  .aside__username, .aside__explore-tumblr, h6{
+
+  .aside__username,
+  .aside__explore-tumblr,
+  h6 {
     font-size: 0.8rem;
   }
+
   .aside__blogname {
     font-size: 0.6rem;
   }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
+
   .search-bar {
     width: 237px;
   }
+
   main {
     padding-left: 3%;
   }
+
   .aside__box {
     margin-left: 0;
   }
+
   .main__published-content--info {
     padding: 33px 2%;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+
   .search-bar {
     width: 190px;
   }
+
   .main__col--profile-pic {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
     margin-bottom: 10px;
+
     img {
       width: 10%;
     }
@@ -257,24 +272,31 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
+
   .col-xs-2 {
     width: 16.666%;
   }
+
   .col-xs-3 {
     width: 25%;
   }
+
   .col-xs-8 {
     width: 60.666%;
   }
+
   .col-xs-9 {
     width: 75%;
   }
+
   .aside__frame--info {
     margin-left: 6%;
   }
+
   .main__col--content {
     width: 100%;
   }
+
   .main__publish-content-box {
     padding-right: 1px;
     padding-left: 1px;
