@@ -16,6 +16,11 @@ p {
   margin: 0;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 /* SaSS variables */
 
 $left-padd: 5.555%;
@@ -27,20 +32,24 @@ nav {
   background-color: #36455b;
 }
 
-.nav__icon {
+.nav__tumblr-icon {
   margin-right: 4.5%;
 }
 
-.search-bar {
+.nav__search-bar {
+
   display: inline-block;
   position: relative;
   color: #aaa;
   font-size: 16px;
   width: 35.5%;
   height: 55px;
-}
 
-.search-bar {
+  .nav__search-bar-icon {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+  }
 
   input {
     height: 32px;
@@ -53,26 +62,24 @@ nav {
   }
 }
 
-.search-bar__icon {
-  position: absolute;
-  top: 20px;
-  left: 17px;
-}
-
 ::placeholder {
   color: #c6c6c6;
 }
 
-.nav__menu_icons {
+.nav__menu-icons {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.nav__pen-box {
-  background-color: #529ecc;
+.nav__menu-pen-box {
+  background: #529ecc url("../../assets/img/pen.png") no-repeat center;
   border-radius: 5px;
-  padding: 2px 7px 0 11px;
   width: 38px;
-  height: 35px;
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* Main section styles */
@@ -84,11 +91,11 @@ main {
 
 /* Main content section styles */
 
-.main__row {
+.main-row {
   margin-bottom: 30px;
 }
 
-.main__col--profile-pic {
+.main-row__profile-pic {
   padding-right: 0;
   padding-left: 0;
   width: 14.02%;
@@ -98,17 +105,18 @@ main {
   }
 }
 
-.main__publish-content-box {
+.main-row__publish-content-box {
   background-color: #fff;
   padding: 22px 5.5% 27px;
+  margin-bottom: 0;
 }
 
-.main__col--content {
+.main-row__content {
   padding-left: 0;
   padding-right: 0;
 }
 
-.main__publish-content-box--option {
+.main-row__publish-content-box__option {
   text-align: center;
 
   p {
@@ -116,31 +124,35 @@ main {
   }
 }
 
-.main__publish-content-box--option--img {
+.main-row__publish-content-box__option-img {
   height: 35px;
 }
 
-.main__published-content-box {
+.main-row__published-content-box {
   background-color: #fff;
 }
 
-.main__published-content--info {
+.main-row__published-content-info {
   padding: 33px 5.5%;
 }
 
-.main__row--main-photo {
-  width: 100%;
+.main-row__main-photo {
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
 }
 
-.main__published-content-follow-button {
+.main-row__published-content-follow-button {
   margin-left: 4.26%;
 }
 
-.main__published-content--icons {
+.main-row__published-content-icons {
   padding-left: 6%;
 }
 
-.main__published-content--action-icons {
+.main-row__published-content-action-icons {
   margin-top: 36px;
 }
 
@@ -150,6 +162,13 @@ main {
   background-color: #fff;
   margin-left: 15%;
   margin-bottom: 30px;
+
+  .row {
+
+    div {
+      padding-right: 0;
+    }
+  }
 }
 
 h6 {
@@ -159,16 +178,6 @@ h6 {
 
 .aside__explore-tumblr {
   padding: 4px 11.13% 24px 10%;
-}
-
-.aside__box {
-
-  .row {
-
-    div {
-      padding-right: 0;
-    }
-  }
 }
 
 .aside__profile-picture {
@@ -196,22 +205,146 @@ h6 {
   margin-bottom: 14px;
 }
 
-.aside__frame--info {
+.aside__frame-info {
   padding-left: 0;
 }
 
-.aside__frame--radar {
+.aside__frame-radar {
   padding: 0 10% 15px;
 }
 
-.aside__box--radar-photo {
+.aside__radar-photo {
   width: 100%;
   padding: 0 10% 15px;
   margin-bottom: 16px;
 }
 
-.aside__box--radar-info {
+.aside__radar-info {
   padding: 0 10% 15px;
+}
+
+/* Modal styles */
+
+.modal {
+  width: 52.77%;
+  height: 380px;
+  padding-right: 0 !important;
+  margin: 181px auto 0;
+}
+
+.modal-backdrop {
+  background-color: #556478;
+}
+
+.modal-dialog {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.modal-content {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.modal-header-custom,
+.modal-footer-custom {
+
+  p {
+    color: #000;
+  }
+}
+
+.modal-header-custom {
+  padding: 23px 5.95% 29px;
+  height: 73px;
+
+  .modal-title {
+    margin-right: 15%;
+  }
+
+  .modal-configuration-icon {
+    height: 100%;
+  }
+
+  .modal-title,
+  .modal-dropdown {
+    padding-top: 2.5px;
+  }
+}
+
+.modal-body {
+  background-color: #f3f3f3;
+  padding: 0;
+  height: 200px;
+
+  .modal-body-row {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .modal-first-col {
+    border-right: 1px solid #d5d5d5;
+  }
+
+  .modal-first-col,
+  .modal-second-col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .modal-body-upload {
+    text-align: center;
+
+    p {
+      color: #c3c3c3;
+    }
+  }
+
+  .local-upload {
+    margin: 66px 30%;
+  }
+
+  .web-upload {
+    margin: 57px 30%;
+  }
+
+  .modal-body-icon-holder-web {
+    height: 71px;
+  }
+
+  .modal-body-icon-holder-local {
+    height: 63px;
+  }
+
+  .modal-body-icon {
+    margin: 0 auto;
+  }
+}
+
+.modal-footer-custom {
+  padding: 20px 5.95%;
+  height: 73px;
+
+  .publish-box {
+    width: 26.96%;
+  }
+
+  .btn-publish {
+    height: 34px;
+    width: 69.56%;
+    background-color: #529ecc;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 8px 3.52% 15px;
+
+    img {
+      margin-left: 15%;
+    }
+  }
 }
 
 /* Media queries for responsiveness */
@@ -236,7 +369,7 @@ h6 {
 
 @media screen and (max-width: 992px) {
 
-  .search-bar {
+  .nav__search-bar {
     width: 237px;
   }
 
@@ -248,18 +381,18 @@ h6 {
     margin-left: 0;
   }
 
-  .main__published-content--info {
+  .main-row__published-content-info {
     padding: 33px 2%;
   }
 }
 
 @media screen and (max-width: 768px) {
 
-  .search-bar {
+  .nav__search-bar {
     width: 190px;
   }
 
-  .main__col--profile-pic {
+  .main-row__profile-pic {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
@@ -289,15 +422,15 @@ h6 {
     width: 75%;
   }
 
-  .aside__frame--info {
+  .aside__frame-info {
     margin-left: 6%;
   }
 
-  .main__col--content {
+  .main-row__content {
     width: 100%;
   }
 
-  .main__publish-content-box {
+  .main-row__publish-content-box {
     padding-right: 1px;
     padding-left: 1px;
   }

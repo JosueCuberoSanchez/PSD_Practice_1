@@ -19,10 +19,24 @@ let syntax_scss = require('postcss-scss');
   )*/
 
 /* Styles task.
- * Compiles SaSS and sends CSS to build.
+ * Compiles main SaSS and sends CSS to build.
 */
-gulp.task('styles', () => {
+gulp.task('styles-main', () => {
     return gulp.src('src/scss/main.scss')
+        .pipe(sass({
+            includePaths: [
+                path.join(__dirname, 'node_modules/bootstrap/scss/'),
+                path.join(__dirname, 'src/scss')]
+            , outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest('build/css/'))
+});
+
+/* Styles task.
+ * Compiles login SaSS and sends CSS to build.
+*/
+gulp.task('styles-login', () => {
+    return gulp.src('src/scss/login.scss')
         .pipe(sass({
             includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
@@ -50,7 +64,8 @@ gulp.task('assets', () => {
  * Watches for changes on SCSS, HTML and PNG files. If a change is done, call the proper copying task.
 */
 gulp.task('watch', () => {
-    gulp.watch('src/scss/**/*.scss', ['styles'], cb => cb);
+    gulp.watch('src/scss/main.scss', ['styles-main'], cb => cb);
+    gulp.watch('src/scss/login.scss', ['styles-login'], cb => cb);
     gulp.watch('src/**/*.html', ['html'], cb => cb);
     gulp.watch('assets/**/*.png', ['assets'], cb => cb);
 });
@@ -185,14 +200,10 @@ gulp.task("scss-lint", function() {
     ];
 
     return gulp.src(
-        ['src/scss/**/*.scss',
-            // Ignore linting vendor assets
-            // Useful if you have bower components
-            '!src/scss/vendor/**/*.scss']
-    ).pipe(postcss(processors, {syntax: syntax_scss}));
+        ['src/scss/**/*.scss', '!src/scss/vendor/**/*.scss']).pipe(postcss(processors, {syntax: syntax_scss}));
 });
 
 /* Start task.
  * Starts all of the above tasks.
 */
-gulp.task('start', ['scss-lint', 'html', 'styles', 'assets', 'server', 'watch'], cb => cb);
+gulp.task('start', ['scss-lint', 'html', 'styles-main', 'styles-login', 'assets', 'server', 'watch'], cb => cb);

@@ -3,130 +3,134 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PSD Practice #1</title>
+    <title>Tumblr dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
 </head>
 <body>
+
 <header>
     <nav>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9">
-                    <a href="#"><img src="../assets/img/tumblrIcon.png" alt="Tumblr icon" class="nav__icon"></a>
-                    <div class="search-bar">
-                        <img src="../assets/img/searchIcon.png" alt="Search icon" class="search-bar__icon">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                    <a href="login.html"><img src="../assets/img/tumblrIcon.png" alt="Tumblr icon" class="nav__tumblr-icon"></a>
+                    <div class="nav__search-bar">
+                        <img src="../assets/img/searchIcon.png" alt="Search icon" class="nav__search-bar-icon">
                         <input placeholder="Search Tumblr">
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-between nav__menu_icons">
-                    <a href="#"><img src="../assets/img/houseOn.png" alt="Home icon"></a>
-                    <a href="#"><img src="../assets/img/locOff.png" alt="Lock icon"></a>
-                    <a href="#"><img src="../assets/img/mailOff.png" alt="Mail icon"></a>
-                    <a href="#"><img src="../assets/img/chatOff.png" alt="Chat icon"></a>
-                    <a href="#"> <img src="../assets/img/boltOff.png" alt="Bolt icon"></a>
-                    <a href="#"><img src="../assets/img/personOff.png" alt="Person icon"></a>
-                    <div class="nav__pen-box">
-                        <a href="#"> <img src="../assets/img/pen.png" alt="Edit icon"></a>
-                    </div>
-                </div>
+                <ul class="col-xs-12 col-sm-12 col-md-6 col-lg-4 list-unstyled d-flex justify-content-between nav__menu-icons">
+                    <li><button type="button" class="btn p-0"><img src="../assets/img/houseOn.png" alt="Home icon"></button></li>
+                    <li><button type="button" class="btn p-0"><img src="../assets/img/locOff.png" alt="Lock icon"></button></li>
+                    <li><button type="button" class="btn p-0"><img src="../assets/img/mailOff.png" alt="Mail icon"></button></li>
+                    <li><button type="button" class="btn p-0"><img src="../assets/img/chatOff.png" alt="Chat icon"></button></li>
+                    <li><button type="button" class="btn p-0"><img src="../assets/img/boltOff.png" alt="Bolt icon"></button></li>
+                    <li><button type="button" class="btn p-0"><img src="../assets/img/personOff.png" alt="Person icon"></button></li>
+                    <li class="nav__menu-pen-box"><button type="button" class="btn p-0"></button></li>
+                </ul>
             </div>
         </div>
     </nav>
 </header>
+
 <main>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-9">
-                <div class="row main__row">
-                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 main__col--profile-pic">
+            <section class="col-xs-12 col-sm-12 col-md-7 col-lg-9">
+
+                <section class="row main-row">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 main-row__profile-pic">
                         <img src="../assets/img/pPhotoRetroGirl.png" alt="Profile picture">
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-11 main__col--content">
-                        <div class="main__publish-content-box d-flex justify-content-between">
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-11 main-row__content">
+                        <ul class="main-row__publish-content-box list-unstyled d-flex justify-content-between">
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
                                     <a href="#"><img src="../assets/img/text.png" alt="Edit icon"></a>
                                 </div>
                                 <p>Text</p>
-                            </div>
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
-                                    <a href="#"> <img src="../assets/img/photo.png" alt="Photo icon"></a>
+                            </li>
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
+                                    <a href="#" data-toggle="modal" data-target="#modal"> <img src="../assets/img/photo.png" alt="Photo icon"></a>
                                 </div>
                                 <p>Photo</p>
-                            </div>
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
+                            </li>
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
                                     <a href="#"> <img src="../assets/img/quote.png" alt="Quote icon"></a>
                                 </div>
                                 <p>Quote</p>
-                            </div>
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
+                            </li>
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
                                     <a href="#"> <img src="../assets/img/link.png" alt="Link icon"></a>
                                 </div>
                                 <p>Link</p>
-                            </div>
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
+                            </li>
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
                                     <a href="#"> <img src="../assets/img/chat.png" alt="Chat icon"></a>
                                 </div>
                                 <p>Chat</p>
-                            </div>
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
+                            </li>
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
                                     <a href="#"> <img src="../assets/img/audio.png" alt="Audio icon"></a>
                                 </div>
                                 <p>Audio</p>
-                            </div>
-                            <div class="main__publish-content-box--option">
-                                <div class="main__publish-content-box--option--img">
+                            </li>
+                            <li class="main-row__publish-content-box__option">
+                                <div class="main-row__publish-content-box__option-img">
                                     <a href="#"> <img src="../assets/img/video.png" alt="Video icon"></a>
                                 </div>
                                 <p>Video</p>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="row main__row">
-                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 main__col--profile-pic">
+                </section>
+
+                <article class="row main-row">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 main-row__profile-pic">
                         <img src="../assets/img/pPhotoGuy.png" alt="Profile picture">
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-11 main__col--content">
-                        <div class="main__published-content-box">
-                            <section class="main__published-content--info">
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-11 main-row__content">
+                        <div class="main-row__published-content-box">
+                            <header class="main-row__published-content-info">
                                 <div class="row">
                                     <div class="col-xs-9 col-sm-9 col-md-9 col-lg-10 d-flex">
                                         <p>Here's a blog: <strong>bob-strauss</strong></p>
-                                        <a href="#" class="main__published-content-follow-button">Follow</a>
+                                        <a href="#" class="main-row__published-content-follow-button">Follow</a>
                                     </div>
-                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 d-flex justify-content-between main__published-content--icons">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 d-flex justify-content-between main-row__published-content-icons">
                                         <div><img src="../assets/img/xClose.png" alt="Close icon"></div>
                                         <div><img src="../assets/img/greyLoc.png" alt="Lock icon"></div>
                                     </div>
                                 </div>
-                            </section>
-                            <img src="../assets/img/mainPhoto.png" alt="Main photo" class="main__row--main-photo">
-                            <section class="main__published-content--info">
+                            </header>
+                            <main class="main-row__main-photo">
+                                <img src="../assets/img/mainPhoto.png" alt="Main photo">
+                            </main>
+                            <footer class="main-row__published-content-info">
                                 <p>#forest #nature #darkness #blackforest</p>
-                                <div class="row main__published-content--action-icons">
+                                <div class="row main-row__published-content-action-icons">
                                     <div class="col-8">
                                         <p><strong>234,500 notes</strong></p>
                                     </div>
-                                    <div class="col-4 d-flex justify-content-between main__published-content--icons">
+                                    <div class="col-4 d-flex justify-content-between main-row__published-content-icons">
                                         <div><img src="../assets/img/sideArrow.png" alt="Close icon"></div>
                                         <div><img src="../assets/img/greyChat.png" alt="Lock icon"></div>
                                         <div><img src="../assets/img/turn.png" alt="Close icon"></div>
                                         <div><img src="../assets/img/heart.png" alt="Lock icon"></div>
                                     </div>
                                 </div>
-                            </section>
+                            </footer>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-3">
+                </article>
+            </section>
+            <aside class="col-xs-12 col-sm-12 col-md-5 col-lg-3">
                 <section>
                     <div class="aside__box">
                         <h6>RECOMMENDED BLOGS</h6>
@@ -137,7 +141,7 @@
                                                      alt="username 1 profile picture"
                                                      class="aside__profile-picture"></a>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame--info">
+                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame-info">
                                     <p class="aside__username"><strong>username</strong></p>
                                     <p class="aside__blogname">Tumblr blog name</p>
                                 </div>
@@ -154,7 +158,7 @@
                                                      alt="username 2 profile picture"
                                                      class="aside__profile-picture"></a>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame--info">
+                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame-info">
                                     <p class="aside__username"><strong>username</strong></p>
                                     <p class="aside__blogname">Tumblr blog name</p>
                                 </div>
@@ -171,7 +175,7 @@
                                                      alt="username 3 profile picture"
                                                      class="aside__profile-picture"></a>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame--info">
+                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame-info">
                                     <p class="aside__username"><strong>username</strong></p>
                                     <p class="aside__blogname">Tumblr blog name</p>
                                 </div>
@@ -188,7 +192,7 @@
                                                      alt="username 4 profile picture"
                                                      class="aside__profile-picture"></a>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame--info">
+                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame-info">
                                     <p class="aside__username"><strong>username</strong></p>
                                     <p class="aside__blogname">Tumblr blog name</p>
                                 </div>
@@ -204,14 +208,14 @@
                 <section>
                     <div class="aside__box">
                         <h6>RADAR</h6>
-                        <div class="aside__frame--radar">
+                        <div class="aside__frame-radar">
                             <div class="row">
                                 <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
                                     <a href="#"><img src="../assets/img/pPhotoRadarGirl.png"
                                                      alt="username 5 profile picture"
                                                      class="aside__profile-picture"></a>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame--info">
+                                <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 aside__frame-info">
                                     <p class="aside__username"><strong>username</strong></p>
                                     <p class="aside__blogname">Tumblr blog name</p>
                                 </div>
@@ -221,13 +225,13 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="../assets/img/radarPhoto.png" alt="Radar photo" class="aside__box--radar-photo">
-                        <div class="aside__box--radar-info">
+                        <img src="../assets/img/radarPhoto.png" alt="Radar photo" class="aside__radar-photo">
+                        <div class="aside__radar-info">
                             <div class="row">
                                 <div class="col-7">
                                     <p>1,320 notes</p>
                                 </div>
-                                <div class="col-4 aside__box--radar-icons d-flex justify-content-between">
+                                <div class="col-4 d-flex justify-content-between">
                                     <div><img src="../assets/img/turn.png" alt="Turn icon"></div>
                                     <div><img src="../assets/img/heart.png" alt="Heart icon"></div>
                                 </div>
@@ -235,10 +239,63 @@
                         </div>
                     </div>
                 </section>
-            </div>
+            </aside>
         </div>
     </div>
 </main>
-<footer></footer>
+<footer>
+
+    <div class="container">
+        <div class="modal" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header-custom d-flex justify-content-between">
+                        <div class="d-flex justify-content-between">
+                            <p class="modal-title"><strong>mikemike</strong></p>
+                            <a href="#" class="modal-dropdown"><div><img src="../assets/img/arrow.png" alt="Dropdown icon"></div></a>
+                        </div>
+                        <a href="#"><img src="../assets/img/config.png" alt="Configuration icon" class="modal-configuration-icon"></a>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row modal-body-row">
+                            <div class="col-6 modal-first-col">
+                                <div class="modal-body-upload local-upload">
+                                    <div class="modal-body-icon-holder-local">
+                                        <img src="../assets/img/uploadPhotoPic.png" alt="Upload photo from device" class="modal-body-icon">
+                                    </div>
+                                    <p>Upload photos</p>
+                                </div>
+                            </div>
+                            <div class="col-6 modal-second-col">
+                                <div class="modal-body-upload web-upload">
+                                    <div class="modal-body-icon-holder-web">
+                                        <img src="../assets/img/uploadPhotoWeb.png" alt="Upload photo from the web" class="modal-body-icon">
+                                    </div>
+                                    <p>Upload photos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-custom d-flex justify-content-between">
+                        <button type="button" class="btn btn-close p-0" data-dismiss="modal"><strong>CLOSE</strong></button>
+                        <div class="d-flex justify-content-between publish-box">
+                            <div><img src="../assets/img/twitterLogo.png" alt="Publish to Twitter" class="social-network-logo"></div>
+                            <button type="button" class="btn btn-publish p-0">POST<img src="../assets/img/arrowWhite.png" alt="Publish to Twitter"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>

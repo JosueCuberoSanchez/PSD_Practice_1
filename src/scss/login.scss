@@ -1,0 +1,75 @@
+@import "vendor/bootstrap-custom";
+
+/* Global styles */
+
+body {
+  background: #303e53 url("../../assets/img/loginBackground.png") no-repeat center;
+  background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-decoration: none;
+}
+
+/* Header styles */
+
+header {
+  padding-top: 209px;
+}
+
+.header__img {
+  width: 77.777%;
+}
+
+/* Main styles */
+
+main {
+  padding-top: 100px;
+}
+
+.main__form {
+  padding: 0 15.27%;
+}
+
+.main__input {
+  width: 100%;
+  height: 61px;
+  text-indent: 9.04%;
+  margin-bottom: 31px;
+}
+
+.main__input::placeholder {
+  color: #ccced0;
+}
+
+.main__button {
+  width: 100%;
+  background-color: #ec8524;
+  border: none;
+  padding-top: 18.5px;
+  padding-bottom: 18.5px;
+  margin-bottom: 60px;
+}
+
+.main__link {
+  width: fit-content;
+  color: #fff;
+}
+
+/* Footer styles */
+
+footer {
+  padding-top: 157px;
+}
+
+.footer__links {
+  padding-left: 19.44%;
+  padding-right: 19.44%;
+  color: #828994;
+}
