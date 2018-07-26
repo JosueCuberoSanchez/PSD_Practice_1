@@ -1,13 +1,5 @@
-// helpers load first
-//@import "helpers/variables.scss";
-// load vendor libs, but just what you need
 @import "vendor/bootstrap-custom";
-
-// load components
-//@import "components/buttons";
-
-// load components
-//@import "pages/home";
+@import "vendor/font-awesome-custom";
 
 /* Global styles */
 
@@ -72,7 +64,7 @@ nav {
 }
 
 .nav__menu-pen-box {
-  background: #529ecc url("../../assets/img/pen.png") no-repeat center;
+  background: #529ecc url(../../assets/img/pen.png) no-repeat center;
   border-radius: 5px;
   width: 38px;
 

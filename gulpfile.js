@@ -3,7 +3,6 @@
 */
 
 let gulp = require('gulp');
-//let gutil =  require('gulp-util');
 let sass = require('gulp-sass');
 let webserver = require('gulp-webserver');
 let path = require('path');
@@ -26,6 +25,7 @@ gulp.task('styles-main', () => {
         .pipe(sass({
             includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
+                path.join(__dirname, 'node_modules/font-awesome/scss/'),
                 path.join(__dirname, 'src/scss')]
             , outputStyle: 'compressed'
         }))
@@ -40,6 +40,7 @@ gulp.task('styles-login', () => {
         .pipe(sass({
             includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
+                path.join(__dirname, 'node_modules/font-awesome/fonts/'),
                 path.join(__dirname, 'src/scss')]
             , outputStyle: 'compressed'
         }))
@@ -58,6 +59,14 @@ gulp.task('html', () => {
 */
 gulp.task('assets', () => {
     return gulp.src('assets/**/*.png').pipe(gulp.dest('build/assets/'))
+});
+
+/* Font awesome task.
+ * Copies fonts to build.
+*/
+gulp.task('font-awesome', function() {
+    return gulp.src('node_modules/font-awesome/fonts/*')
+        .pipe(gulp.dest('build/fonts'))
 });
 
 /* Watch task.
@@ -206,4 +215,4 @@ gulp.task("scss-lint", function() {
 /* Start task.
  * Starts all of the above tasks.
 */
-gulp.task('start', ['scss-lint', 'html', 'styles-main', 'styles-login', 'assets', 'server', 'watch'], cb => cb);
+gulp.task('start', ['scss-lint', 'html', 'styles-main', 'styles-login', 'assets', 'font-awesome', 'server', 'watch'], cb => cb);
