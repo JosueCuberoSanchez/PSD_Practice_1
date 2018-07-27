@@ -55,10 +55,17 @@ gulp.task('html', () => {
 });
 
 /* JS task.
- * Copies javascript files to build.
+ * Copies bootstrap javascript files to build.
 */
-gulp.task('js', function() {
+gulp.task('bootstrap-js', function() {
     return gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js')
+        .pipe(gulp.dest('build/js/'))});
+
+/* Jquery task.
+ * Copies jquery min to build.
+*/
+gulp.task('jquery', function() {
+    return gulp.src('node_modules/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('build/js/'))});
 
 /* Assets task.
@@ -222,4 +229,6 @@ gulp.task("scss-lint", function() {
 /* Start task.
  * Starts all of the above tasks.
 */
-gulp.task('start', ['scss-lint', 'html', 'styles-main', 'styles-login', 'js', 'assets', 'font-awesome', 'server', 'watch'], cb => cb);
+gulp.task('start',
+    ['scss-lint', 'html', 'styles-main', 'styles-login', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
+        cb => cb);
