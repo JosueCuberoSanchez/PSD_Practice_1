@@ -55,6 +55,13 @@ gulp.task('html', () => {
 });
 
 /* JS task.
+ * Copies JS files to build.
+*/
+gulp.task('js', () => {
+    return gulp.src('src/**/*.js').pipe(gulp.dest('build/'))
+});
+
+/* Bootstrap JS task.
  * Copies bootstrap javascript files to build.
 */
 gulp.task('bootstrap-js', function() {
@@ -90,6 +97,7 @@ gulp.task('watch', () => {
     gulp.watch('src/scss/main.scss', ['styles-main'], cb => cb);
     gulp.watch('src/scss/login.scss', ['styles-login'], cb => cb);
     gulp.watch('src/**/*.html', ['html'], cb => cb);
+    gulp.watch('src/**/*.js', ['js'], cb => cb);
     gulp.watch('assets/**/*.png', ['assets'], cb => cb);
 });
 
@@ -230,5 +238,5 @@ gulp.task("scss-lint", function() {
  * Starts all of the above tasks.
 */
 gulp.task('start',
-    ['scss-lint', 'html', 'styles-main', 'styles-login', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
+    ['scss-lint', 'html', 'styles-main', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
         cb => cb);

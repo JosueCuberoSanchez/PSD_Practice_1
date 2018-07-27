@@ -28,9 +28,11 @@
     <section class="container-fluid">
         <div class="row">
             <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <form type="post" class="main__form">
-                    <input type="email" class="form-control main__input" aria-describedby="emailHelp" placeholder="Email">
-                    <button type="submit" class="btn btn-primary main__button">Next</button>
+                <form action="index.html" class="main__form">
+                    <input type="email" class="form-control main__input" id="main__input" aria-describedby="emailHelp" placeholder="Email" required>
+                    <button type="submit" class="btn btn-primary main__button" id="main__button">
+                        Next
+                    </button>
                 </form>
                 <a href="#" class="main__link mx-auto d-block">Sign up</a>
             </div>
@@ -57,4 +59,8 @@
 </footer>
 
 </body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
 </html>
