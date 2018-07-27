@@ -13,6 +13,18 @@ button {
   border: none;
 }
 
+.fa-grey {
+  color: #737e8e;
+}
+
+.fa-black {
+  color: #000;
+}
+
+.fa-white {
+  color: #fff;
+}
+
 /* SaSS variables */
 
 $left-padd: 5.555%;
@@ -26,6 +38,8 @@ nav {
 
 .nav__tumblr-icon {
   margin-right: 4.5%;
+  margin-top: 5px;
+  color: #fff;
 }
 
 .nav__search-bar {
@@ -39,7 +53,7 @@ nav {
 
   .nav__search-bar-icon {
     position: absolute;
-    top: 20px;
+    top: 19px;
     left: 17px;
   }
 
@@ -61,12 +75,25 @@ nav {
 .nav__menu-icons {
   margin-top: 10px;
   margin-bottom: 10px;
+
+  li {
+    margin-top: 5px;
+  }
+}
+
+.nav__menu-icon {
+  font-size: 1.5rem;
+}
+
+.nav__menu-icon--pen {
+  color: #36475e;
 }
 
 .nav__menu-pen-box {
-  background: #529ecc url(../../assets/img/pen.png) no-repeat center;
+  background: #529ecc no-repeat center;
   border-radius: 5px;
   width: 38px;
+  margin-top: 0 !important;
 
   button {
     width: 100%;
@@ -97,7 +124,7 @@ main {
   }
 }
 
-.main-row__publish-content-box {
+.main-row__post-content-box {
   background-color: #fff;
   padding: 22px 5.5% 27px;
   margin-bottom: 0;
@@ -108,7 +135,7 @@ main {
   padding-right: 0;
 }
 
-.main-row__publish-content-box__option {
+.main-row__post-content-box__option {
   text-align: center;
 
   p {
@@ -116,15 +143,63 @@ main {
   }
 }
 
-.main-row__publish-content-box__option-img {
+.main-row__post-content-box-option-link{
   height: 35px;
+  display: inline-block;
 }
 
-.main-row__published-content-box {
+.main-row__post-content-box-option {
+  background-image: url(../../assets/img/sprite.png);
+  display: inline-block;
+}
+
+.main-row__post-content-box--text {
+  width: 26px;
+  height: 16px;
+  background-position: -55px 0;
+}
+
+.main-row__post-content-box--photo {
+  width: 31px;
+  height: 25px;
+  background-position: -134px 0;
+}
+
+.main-row__post-content-box--quote {
+  width: 26px;
+  height: 23px;
+  background-position: -81px 0;
+}
+
+.main-row__post-content-box--link {
+  width: 27px;
+  height: 27px;
+  background-position: -107px 0;
+}
+
+.main-row__post-content-box--chat {
+  width: 27px;
+  height: 27px;
+  background-position: -28px 0;
+}
+
+.main-row__post-content-box--audio {
+  width: 28px;
+  height: 29px;
+  background-position: 0 0;
+}
+
+.main-row__post-content-box--video {
+  width: 31px;
+  height: 22px;
+  background-position: -165px 0;
+}
+
+.main-row__posted-content-box {
   background-color: #fff;
 }
 
-.main-row__published-content-info {
+.main-row__posted-content-info {
   padding: 33px 5.5%;
 }
 
@@ -136,15 +211,15 @@ main {
   }
 }
 
-.main-row__published-content-follow-button {
+.main-row__posted-content-follow-button {
   margin-left: 4.26%;
 }
 
-.main-row__published-content-icons {
+.main-row__posted-content-icons {
   padding-left: 6%;
 }
 
-.main-row__published-content-action-icons {
+.main-row__posted-content-action-icons {
   margin-top: 36px;
 }
 
@@ -257,10 +332,6 @@ h6 {
     margin-right: 15%;
   }
 
-  .modal-configuration-icon {
-    height: 100%;
-  }
-
   .modal-title,
   .modal-dropdown {
     padding-top: 2.5px;
@@ -314,6 +385,20 @@ h6 {
 
   .modal-body-icon {
     margin: 0 auto;
+    background-image: url("../../assets/img/sprite.png");
+    display: inline-block;
+  }
+
+  .modal-body-icon--local {
+    width: 48px;
+    height: 33px;
+    background-position: -196px 0;
+  }
+
+  .modal-body-icon--web {
+    width: 46px;
+    height: 46px;
+    background-position: -244px 0;
   }
 }
 
@@ -321,11 +406,11 @@ h6 {
   padding: 20px 5.95%;
   height: 73px;
 
-  .publish-box {
+  .post-box {
     width: 26.96%;
   }
 
-  .btn-publish {
+  .btn-post {
     height: 34px;
     width: 69.56%;
     background-color: #529ecc;
@@ -333,7 +418,7 @@ h6 {
     font-size: 0.7rem;
     padding: 8px 3.52% 15px;
 
-    img {
+    i {
       margin-left: 15%;
     }
   }
@@ -373,7 +458,7 @@ h6 {
     margin-left: 0;
   }
 
-  .main-row__published-content-info {
+  .main-row__posted-content-info {
     padding: 33px 2%;
   }
 }
@@ -393,6 +478,10 @@ h6 {
     img {
       width: 10%;
     }
+  }
+
+  .modal {
+    width: 90%;
   }
 }
 
@@ -422,8 +511,12 @@ h6 {
     width: 100%;
   }
 
-  .main-row__publish-content-box {
+  .main-row__post-content-box {
     padding-right: 1px;
     padding-left: 1px;
+  }
+
+  .post-box {
+    width: 50% !important;
   }
 }
