@@ -58,8 +58,22 @@ main {
   margin-bottom: 7.23vh;
 }
 
+.main__button:hover {
+  background-color: #ec8524;
+}
+
+.main__button:active {
+  background-color: #fe9624 !important;
+}
+
 .main__link {
   width: fit-content;
+}
+
+.main__link:link,
+.main__link:hover,
+.main__link:active,
+.main__link:visited {
   color: #fff;
 }
 
@@ -70,10 +84,16 @@ footer {
 }
 
 .footer__links {
-  color: #828994;
+
+  a:link,
+  a:hover,
+  a:active,
+  a:visited {
+    color: #828994;
+  }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
 
   .footer__links {
     padding-left: 19.44%;

@@ -54,6 +54,13 @@ gulp.task('html', () => {
     return gulp.src('src/**/*.html').pipe(gulp.dest('build/'))
 });
 
+/* JS task.
+ * Copies javascript files to build.
+*/
+gulp.task('js', function() {
+    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js')
+        .pipe(gulp.dest('build/js/'))});
+
 /* Assets task.
  * Copies assets to build.
 */
@@ -215,4 +222,4 @@ gulp.task("scss-lint", function() {
 /* Start task.
  * Starts all of the above tasks.
 */
-gulp.task('start', ['scss-lint', 'html', 'styles-main', 'styles-login', 'assets', 'font-awesome', 'server', 'watch'], cb => cb);
+gulp.task('start', ['scss-lint', 'html', 'styles-main', 'styles-login', 'js', 'assets', 'font-awesome', 'server', 'watch'], cb => cb);
