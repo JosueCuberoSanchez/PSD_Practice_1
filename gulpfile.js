@@ -65,7 +65,7 @@ gulp.task('js', () => {
  * Copies bootstrap javascript files to build.
 */
 gulp.task('bootstrap-js', function() {
-    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js')
+    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
         .pipe(gulp.dest('build/js/'))});
 
 /* Jquery task.
