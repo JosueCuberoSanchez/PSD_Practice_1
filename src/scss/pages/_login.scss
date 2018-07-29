@@ -1,0 +1,95 @@
+body {
+  background: #303e53 url(../../assets/img/loginBackground.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-decoration: none;
+}
+
+/* Header styles */
+
+header {
+  padding-top: 25.21vh;
+}
+
+/* Main styles */
+
+main {
+  padding-top: 12.06vh;
+}
+
+.main__form {
+  padding: 0 15.27%;
+}
+
+.main__input {
+  width: 100%;
+  height: 60px;
+  text-indent: 9.04%;
+  margin-bottom: 3.73vh;
+}
+
+.main__input::placeholder {
+  color: #ccced0;
+}
+
+.main__button {
+  width: 100%;
+  background-color: #ec8524;
+  border: none;
+  height: 60px;
+  padding-top: 2.23vh;
+  padding-bottom: 2.23vh;
+  margin-bottom: 7.23vh;
+}
+
+.main__button:hover {
+  background-color: #ec8524;
+}
+
+.main__button:active {
+  background-color: #fe9624 !important;
+}
+
+.main__link {
+  width: fit-content;
+}
+
+.main__link:link,
+.main__link:hover,
+.main__link:active,
+.main__link:visited {
+  color: #fff;
+}
+
+/* Footer styles */
+
+footer {
+  padding-top: 18.93vh;
+}
+
+.footer__links {
+
+  a:link,
+  a:hover,
+  a:active,
+  a:visited {
+    color: #828994;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .footer__links {
+    padding-left: 19.44%;
+    padding-right: 19.44%;
+  }
+}
