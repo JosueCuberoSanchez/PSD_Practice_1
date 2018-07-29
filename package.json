@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/gulp start"
+    "start": "./node_modules/.bin/gulp start",
+    "deploy": "./node_modules/.bin/gulp deploy"
   },
   "repository": {
     "type": "git",

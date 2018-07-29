@@ -240,3 +240,10 @@ gulp.task("scss-lint", function() {
 gulp.task('start',
     ['scss-lint', 'html', 'styles-main', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
         cb => cb);
+
+/* Start deploy task.
+ * Deploys the app.
+*/
+gulp.task('deploy',
+    ['html', 'styles-main', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome'],
+    cb => cb);

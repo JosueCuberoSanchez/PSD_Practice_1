@@ -3,7 +3,7 @@
 
 /* SaSS variables */
 
-$left-padd: 5.555%;
+
 
 /* Global styles */
 
@@ -52,7 +52,7 @@ input[type="file"] {
 /* Nav bar styles */
 
 nav {
-  padding: 21px $left-padd 19px;
+  padding: 21px 5.555% 19px;
   background-color: #36455b;
 
   .nav__tumblr-icon {
@@ -120,7 +120,7 @@ nav {
 
 main {
   background-color: #d2dae6;
-  padding: 37px $left-padd 0 9.3%;
+  padding: 37px 5.555% 0 9.3%;
 
   /* Main content styles */
 
