@@ -1,16 +1,399 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PSD Practice</title>
+    <title>Tumblr dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="./js/main.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+<header>
+    <nav class="navbar navbar-expand-sm py-3">
+        <div class="container-fluid pl-0">
+            <div class="row w-100 mx-0">
+                <div class="col-1 pl-0 text-center">
+                    <a class="navbar-brand" href="#"><i class="fa fa-tumblr fa-white nav__menu-icon--logo"></i></a>
+                </div>
+                <div class="col-xs-9 col-sm-5 col-md-4 col-lg-4 pl-0 pr-5">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text border-0 pl-4 pr-2 nav__search-bar" id="basic-addon1"><i class="fa fa-search fa-grey"></i></span>
+                        </div>
+                        <input type="text" class="form-control border-0 nav__search-bar" placeholder="Search Tumblr" aria-label="Search Tumblr" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-6 col-md-5 offset-md-2 col-lg-3 offset-lg-4 pl-0">
+                    <button class="navbar-toggler toggler-example pl-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="dark-blue-text">
+                            <i class="fa fa-bars fa-1x pl-0"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse pt-2" id="navbarSupportedContent1">
+                        <ul class="navbar-nav list-unstyled d-flex justify-content-between w-100 nav__menu-icons">
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-home nav__menu-icon fa-white">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Home</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-compass fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Compass</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-envelope fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Inbox</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-comment fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Messenger</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-bolt fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Bolt</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-user fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Profile</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item nav__menu-pen-box mt-0">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-pencil nav__menu-icon nav__menu-icon--pen">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Edit</strong>
+                                    </i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+
+            <section class="col-xs-12 col-sm-12 col-md-7 col-lg-9">
+
+                <section class="row main-row">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 main-row__profile-pic pr-0 pl-0">
+                        <img src="../assets/img/pPhotoRetroGirl.png" alt="Profile picture">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-11 pr-0 pl-0">
+                        <ul class="main-row__post-content-box mb-0 list-unstyled d-flex justify-content-between">
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--text"></i></a>
+                                <p class="mb-0">Text</p>
+                            </li>
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" data-toggle="modal" data-target="#modal"
+                                   class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--photo"></i></a>
+                                <p class="mb-0">Photo</p>
+                            </li>
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--quote"></i></a>
+                                <p class="mb-0">Quote</p>
+                            </li>
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--link"></i></a>
+                                <p class="mb-0">Link</p>
+                            </li>
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--chat"></i></a>
+                                <p class="mb-0">Chat</p>
+                            </li>
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--audio"></i></a>
+                                <p class="mb-0">Audio</p>
+                            </li>
+                            <li class="main-row__post-content-box__option">
+                                <a href="#" class="main-row__post-content-box-option-link"><i
+                                        class="main-row__post-content-box-option main-row__post-content-box--video"></i></a>
+                                <p class="mb-0">Video</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <article class="row main-row">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 main-row__profile-pic  pr-0 pl-0">
+                        <img src="../assets/img/pPhotoGuy.png" alt="Profile picture">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-11 pr-0 pl-0">
+                        <div class="main-row__posted-content-box">
+                            <header class="main-row__posted-content-info">
+                                <div class="row">
+                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-10 d-flex">
+                                        <p>Here's a blog: <strong>bob-strauss</strong></p>
+                                        <a href="#" class="main-row__posted-content-follow-button">Follow</a>
+                                    </div>
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 d-flex justify-content-between main-row__posted-content-icons">
+                                        <div><i class="fa fa-times fa-grey"></i></div>
+                                        <div><i class="fa fa-compass fa-grey"></i></div>
+                                    </div>
+                                </div>
+                            </header>
+                            <main class="p-0">
+                                <img src="../assets/img/mainPhoto.png" alt="Main photo" class="main-row__main-photo">
+                            </main>
+                            <footer class="main-row__posted-content-info">
+                                <p>#forest #nature #darkness #blackforest</p>
+                                <div class="row main-row__posted-content-action-icons">
+                                    <div class="col-8">
+                                        <p><strong>234,500 notes</strong></p>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-between main-row__posted-content-icons">
+                                        <div><i class="fa fa-location-arrow fa-grey"></i></div>
+                                        <div><i class="fa fa-comment fa-grey"></i></div>
+                                        <div><i class="fa fa-exchange fa-grey"></i></div>
+                                        <div><i class="fa fa-heart fa-grey"></i></div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <aside class="col-xs-12 col-sm-12 col-md-5 col-lg-3">
+
+                <section class="aside__box">
+                    <h6 class="mb-0">RECOMMENDED BLOGS</h6>
+                    <div class="aside__frame">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                                <a href="#"><img src="../assets/img/pPhotoR1.png"
+                                                 alt="username 1 profile picture"
+                                                 class="aside__profile-picture"></a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 pl-0 aside__frame-info">
+                                <p class="aside__username mb-0"><strong>username</strong></p>
+                                <p class="aside__blogname mb-0">Tumblr blog name</p>
+                            </div>
+                            <div class="col-2 aside__plus-symbol">
+                                <a href="#"><i class="fa fa-plus-square fa-grey"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside__frame">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                                <a href="#"><img src="../assets/img/pPhotoR2.png"
+                                                 alt="username 2 profile picture"
+                                                 class="aside__profile-picture"></a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 pl-0 aside__frame-info">
+                                <p class="aside__username mb-0"><strong>username</strong></p>
+                                <p class="aside__blogname mb-0">Tumblr blog name</p>
+                            </div>
+                            <div class="col-2 aside__plus-symbol">
+                                <a href="#"><i class="fa fa-plus-square fa-grey"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside__frame">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                                <a href="#"><img src="../assets/img/pPhotoR3.png"
+                                                 alt="username 3 profile picture"
+                                                 class="aside__profile-picture"></a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 pl-0 aside__frame-info">
+                                <p class="aside__username mb-0"><strong>username</strong></p>
+                                <p class="aside__blogname mb-0">Tumblr blog name</p>
+                            </div>
+                            <div class="col-2 aside__plus-symbol">
+                                <a href="#"><i class="fa fa-plus-square fa-grey"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside__frame">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                                <a href="#"><img src="../assets/img/pPhotoR4.png"
+                                                 alt="username 4 profile picture"
+                                                 class="aside__profile-picture"></a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 pl-0 aside__frame-info">
+                                <p class="aside__username mb-0"><strong>username</strong></p>
+                                <p class="aside__blogname mb-0">Tumblr blog name</p>
+                            </div>
+                            <div class="col-2 aside__plus-symbol">
+                                <a href="#"><i class="fa fa-plus-square fa-grey"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"><h6 class="aside__explore-tumblr mb-0"><strong>EXPLORE TUMBLR</strong></h6></a>
+                </section>
+
+                <section class="aside__box">
+                    <h6 class="mb-0">RADAR</h6>
+                    <div class="aside__frame-radar">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                                <a href="#"><img src="../assets/img/pPhotoRadarGirl.png"
+                                                 alt="username 5 profile picture"
+                                                 class="aside__profile-picture"></a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7 pl-0 aside__frame-info">
+                                <p class="aside__username mb-0"><strong>username</strong></p>
+                                <p class="aside__blogname mb-0">Tumblr blog name</p>
+                            </div>
+                            <div class="col-2 aside__plus-symbol">
+                                <a href="#"><i class="fa fa-plus-square fa-grey"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="../assets/img/radarPhoto.png" alt="Radar photo" class="aside__radar-photo">
+                    <div class="aside__radar-info">
+                        <div class="row">
+                            <div class="col-7">
+                                <p>1,320 notes</p>
+                            </div>
+                            <div class="col-4 d-flex justify-content-between">
+                                <div><i class="fa fa-exchange fa-grey"></i></div>
+                                <div><i class="fa fa-heart fa-grey"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </aside>
+        </div>
+    </div>
+</main>
+<footer>
+
+    <section class="container-fluid">
+        <div class="modal pr-0" id="modal">
+            <div class="modal-dialog m-0">
+                <div class="modal-content">
+
+                    <header class="modal-header-custom d-flex justify-content-between">
+                        <div class="dropdown d-flex">
+                            <button class="btn btn-secondary p-0 modal-header-dropdown" type="button"
+                                    id="modal-header-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <strong>mikemike</strong>
+                                <i class="fa fa-caret-down fa-black"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="modal-header-dropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-cog fa-2x fa-grey"></i></a>
+                    </header>
+
+                    <main class="modal-body p-0">
+                        <div class="row modal-body-row m-0">
+                            <div class="col-6 pl-0 pr-0 modal-first-col">
+                                <div class="form-group modal-body-upload local-upload">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <div class="btn-file">
+                                                <div class="modal-body-icon-holder-local">
+                                                    <label class="modal-body-icon modal-body-icon--local" for="modal-body--local-input">
+                                                        <input type="file" id="modal-body--local-input"/>
+                                                    </label>
+                                                </div>
+                                                <p>Upload photos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img id="modal-body-uploaded--local-image" class="modal-body-uploaded-image mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-6 pl-0 pr-0 modal-second-col">
+                                <div class="form-group modal-body-upload web-upload">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <div class="btn-file">
+                                                <div class="modal-body-icon-holder-web">
+                                                    <label class="modal-body-icon modal-body-icon--web" for="modal-body--web-input">
+                                                        <input type="file" id="modal-body--web-input"/>
+                                                    </label>
+                                                </div>
+                                                <p>Upload photos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img id="modal-body-uploaded--web-image" class="modal-body-uploaded-image mx-auto"/>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="modal-footer-custom">
+                        <div class="row">
+                            <div class="col-6 p-0">
+                                <button type="button" class="btn p-0" data-dismiss="modal"><strong>CLOSE</strong>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-xs-10 offset-xs-2 col-sm-7 offset-sm-5 col-md-8 offset-md-4 col-lg-7 offset-lg-5 p-0 d-flex justify-content-between">
+                                        <i class="fa fa-twitter fa-2x"></i>
+                                        <div class="dropdown d-flex">
+                                            <button type="button" class="btn btn-secondary modal-footer-dropdown"
+                                                    id="modal-footer-dropdown" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                POST
+                                                <i class="fa fa-caret-down fa-white"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="modal-footer-dropdown">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
