@@ -1,65 +1,53 @@
 /* Nav bar styles */
 
 nav {
-  padding: 21px 5.555% 19px;
   background-color: $nav-background-color;
 
-  .nav__tumblr-icon {
-    margin-right: 4.5%;
-    margin-top: 5px;
-  }
-
-  .nav__search-bar {
-
-    display: inline-block;
-    position: relative;
-    color: $nav-searchbar-text-color;
-    font-size: 16px;
-    width: 35.5%;
-    height: 55px;
-
-    .nav__search-bar-icon {
-      position: absolute;
-      top: 19px;
-      left: 17px;
-    }
-
-    input {
-      height: 32px;
-      background-color: $nav-searchbar-background-color;
-      border: none;
-      text-indent: 43px;
-      width: 100%;
-      margin-top: 10px;
-      color: $nav-searchbar-text-color;
-    }
-  }
-
-  .nav__menu-icons {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    li {
-      margin-top: 5px;
-    }
-  }
-
-  .nav__menu-icon {
+  .nav__menu-icon--logo {
     font-size: 1.5rem;
   }
 
-  .nav__menu-icon--pen {
-    color: $nav-pen-color;
+  .nav__search-bar {
+    background-color: $nav-searchbar-background-color;
+    color: $nav-searchbar-text-color;
+  }
+
+  .nav__search-bar:focus {
+    background-color: $nav-searchbar-background-color;
+    color: $nav-searchbar-text-color;
+    box-shadow: none;
+  }
+
+  .nav__menu-icons {
+    padding-right: 15%;
+  }
+
+  .nav__menu-hamburger-text {
+    font-size: 0.55rem;
   }
 
   .nav__menu-pen-box {
     background: $button-color no-repeat center;
     border-radius: 5px;
-    width: 38px;
+    width: 27px;
 
     button {
       width: 100%;
       height: 100%;
+
+      .nav__menu-icon--pen {
+        color: $nav-pen-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  nav {
+
+    .nav__menu-pen-box {
+      width: 40px;
     }
   }
 }

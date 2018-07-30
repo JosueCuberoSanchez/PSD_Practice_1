@@ -12,56 +12,81 @@
 <body>
 
 <header>
-    <nav>
-        <div class="container-fluid">
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                    <a href="login.html" class="align-middle"><i class="fa fa-tumblr fa-2x fa-white nav__tumblr-icon"></i></a>
-                    <div class="nav__search-bar">
-                        <i class="fa fa-search nav__search-bar-icon"></i>
-                        <input placeholder="Search Tumblr">
+    <nav class="navbar navbar-expand-sm py-3">
+        <div class="container-fluid pl-0">
+            <div class="row w-100 mx-0">
+                <div class="col-1 pl-0 text-center">
+                    <a class="navbar-brand" href="#"><i class="fa fa-tumblr fa-white nav__menu-icon--logo"></i></a>
+                </div>
+                <div class="col-xs-9 col-sm-5 col-md-4 col-lg-4 pl-0 pr-5">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text border-0 pl-4 pr-2 nav__search-bar" id="basic-addon1"><i class="fa fa-search fa-grey"></i></span>
+                        </div>
+                        <input type="text" class="form-control border-0 nav__search-bar" placeholder="Search Tumblr" aria-label="Search Tumblr" aria-describedby="basic-addon1">
                     </div>
                 </div>
-
-                <ul class="col-xs-12 col-sm-12 col-md-6 col-lg-4 list-unstyled d-flex justify-content-between nav__menu-icons">
-                    <li>
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-home fa-2x nav__menu-icon nav__menu-icon fa-white"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-compass fa-2x fa-grey nav__menu-icon"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-envelope fa-2x fa-grey nav__menu-icon"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-comment fa-2x fa-grey nav__menu-icon"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-bolt fa-2x fa-grey nav__menu-icon"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-user fa-2x fa-grey nav__menu-icon"></i>
-                        </button>
-                    </li>
-                    <li class="nav__menu-pen-box mt-0">
-                        <button type="button" class="btn p-0">
-                            <i class="fa fa-pencil fa-2x nav__menu-icon nav__menu-icon--pen"></i>
-                        </button>
-                    </li>
-                </ul>
-
+                <div class="col-xs-2 col-sm-6 col-md-5 offset-md-2 col-lg-3 offset-lg-4 pl-0">
+                    <button class="navbar-toggler toggler-example pl-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="dark-blue-text">
+                            <i class="fa fa-bars fa-1x pl-0"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse pt-2" id="navbarSupportedContent1">
+                        <ul class="navbar-nav list-unstyled d-flex justify-content-between w-100 nav__menu-icons">
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-home nav__menu-icon fa-white">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Home</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-compass fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Compass</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-envelope fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Inbox</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-comment fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Messenger</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-bolt fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Bolt</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-user fa-grey nav__menu-icon">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Profile</strong>
+                                    </i>
+                                </button>
+                            </li>
+                            <li class="nav-item nav__menu-pen-box mt-0">
+                                <button type="button" class="btn p-0 nav-link">
+                                    <i class="fa fa-pencil nav__menu-icon nav__menu-icon--pen">
+                                        <strong class="d-lg-none d-md-none d-sm-none nav__menu-hamburger-text">Edit</strong>
+                                    </i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
