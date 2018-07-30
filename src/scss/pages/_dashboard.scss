@@ -75,50 +75,45 @@ main {
   }
 
   .main-row__post-content-box-option {
-    background-image: url(../../assets/img/sprite.png);
+    background-image: url(../../assets/img/sprite-mixins.png);
     display: inline-block;
+    width: $small-sprite;
+    height: $small-sprite;
   }
 
   .main-row__post-content-box--text {
-    width: 26px;
-    height: 16px;
-    background-position: -55px 0;
+
+    @include sprite(0, true);
   }
 
   .main-row__post-content-box--photo {
-    width: 31px;
-    height: 25px;
-    background-position: -134px 0;
+
+    @include sprite(1, true);
   }
 
   .main-row__post-content-box--quote {
-    width: 26px;
-    height: 23px;
-    background-position: -81px 0;
+
+    @include sprite(2, true);
   }
 
   .main-row__post-content-box--link {
-    width: 27px;
-    height: 27px;
-    background-position: -107px 0;
+
+    @include sprite(3, true);
   }
 
   .main-row__post-content-box--chat {
-    width: 27px;
-    height: 27px;
-    background-position: -28px 0;
+
+    @include sprite(4, true);
   }
 
   .main-row__post-content-box--audio {
-    width: 28px;
-    height: 29px;
-    background-position: 0 0;
+
+    @include sprite(5, true);
   }
 
   .main-row__post-content-box--video {
-    width: 31px;
-    height: 22px;
-    background-position: -165px 0;
+
+    @include sprite(6, true);
   }
 
   .main-row__posted-content-box {
@@ -298,8 +293,10 @@ main {
   }
 
   .modal-body-icon {
-    background-image: url(../../assets/img/sprite.png);
+    background-image: url(../../assets/img/sprite-mixins.png);
     display: inline-block;
+    width: $big-sprite;
+    height: $big-sprite;
 
     input {
       display: none;
@@ -307,15 +304,13 @@ main {
   }
 
   .modal-body-icon--local {
-    width: 48px;
-    height: 33px;
-    background-position: -196px 0;
+
+    @include sprite(0, false);
   }
 
   .modal-body-icon--web {
-    width: 46px;
-    height: 46px;
-    background-position: -244px 0;
+
+    @include sprite(1, false);
   }
 
   .input-group-btn {
