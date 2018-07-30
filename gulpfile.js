@@ -20,8 +20,8 @@ let syntax_scss = require('postcss-scss');
 /* Styles task.
  * Compiles main SaSS and sends CSS to build.
 */
-gulp.task('styles-main', () => {
-    return gulp.src('src/scss/main.scss')
+gulp.task('styles-dashboard', () => {
+    return gulp.src('src/scss/dashboard.scss')
         .pipe(sass({
             includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
@@ -36,7 +36,7 @@ gulp.task('styles-main', () => {
  * Compiles login SaSS and sends CSS to build.
 */
 gulp.task('styles-login', () => {
-    return gulp.src('src/scss/login.scss')
+    return gulp.src('src/scss/main.scss')
         .pipe(sass({
             includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
@@ -94,8 +94,8 @@ gulp.task('font-awesome', function() {
  * Watches for changes on SCSS, HTML and PNG files. If a change is done, call the proper copying task.
 */
 gulp.task('watch', () => {
-    gulp.watch('src/scss/main.scss', ['styles-main'], cb => cb);
-    gulp.watch('src/scss/login.scss', ['styles-login'], cb => cb);
+    gulp.watch('src/scss/main.scss', ['styles-login'], cb => cb);
+    gulp.watch('src/scss/dashboard.scss', ['styles-dashboard'], cb => cb);
     gulp.watch('src/**/*.html', ['html'], cb => cb);
     gulp.watch('src/**/*.js', ['js'], cb => cb);
     gulp.watch('assets/**/*.png', ['assets'], cb => cb);
@@ -238,12 +238,12 @@ gulp.task("scss-lint", function() {
  * Starts all of the above tasks.
 */
 gulp.task('start',
-    ['scss-lint', 'html', 'styles-main', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
+    ['scss-lint', 'html', 'styles-dashboard', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
         cb => cb);
 
 /* Start deploy task.
  * Deploys the app.
 */
 gulp.task('deploy',
-    ['html', 'styles-main', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome'],
+    ['html', 'styles-dashboard', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome'],
     cb => cb);
