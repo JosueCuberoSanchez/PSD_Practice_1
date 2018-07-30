@@ -126,7 +126,9 @@ gulp.task("scss-lint", function() {
             } ],
             'at-rule-name-case': 'lower',
             'at-rule-name-space-after': 'always-single-line',
-            'at-rule-no-unknown': true,
+            "at-rule-no-unknown": [true, {
+                "ignoreAtRules": ["function", "if", "else", "each", "include", "mixin"]
+            }],
             'at-rule-semicolon-newline-after': 'always',
             'block-closing-brace-newline-after': 'always',
             'block-closing-brace-newline-before': 'always',

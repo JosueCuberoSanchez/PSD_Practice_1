@@ -1,0 +1,13 @@
+/*
+  This mixin will calculate the background position for the dashboard sprite.
+ */
+@mixin sprite($img, $small) {
+
+  @if $small {
+    background-position: - $img * ($small-sprite + 1) -1px;
+  }
+
+  @else {
+    background-position: (-7*($small-sprite+1))+1 + (-$img * ($big-sprite + 1)) -1px;
+  }
+}
