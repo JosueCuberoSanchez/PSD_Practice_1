@@ -10,6 +10,9 @@ let postcss     = require('gulp-postcss');
 let reporter    = require('postcss-reporter');
 let stylelint   = require('stylelint');
 let syntax_scss = require('postcss-scss');
+let uglify = require('gulp-uglify');
+let pump = require('pump');
+let eslint = require('gulp-eslint');
 
 /*gulp.task(
     name : String,
@@ -55,10 +58,16 @@ gulp.task('html', () => {
 });
 
 /* JS task.
- * Copies JS files to build.
+ * Copies and uglifies JS files to build.
 */
-gulp.task('js', () => {
-    return gulp.src('src/**/*.js').pipe(gulp.dest('build/'))
+gulp.task('js', function (cb) {
+    pump([
+            gulp.src('src/**/*.js'),
+            uglify(),
+            gulp.dest('build/')
+        ],
+        cb
+    );
 });
 
 /* Bootstrap JS task.
@@ -88,6 +97,14 @@ gulp.task('assets', () => {
 gulp.task('font-awesome', function() {
     return gulp.src('node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('build/fonts'))
+});
+
+/* Favicon task.
+ * Copies favicon to build.
+*/
+gulp.task('favicon', function() {
+    return gulp.src('favicon.ico')
+        .pipe(gulp.dest('build/'))
 });
 
 /* Watch task.
@@ -236,16 +253,28 @@ gulp.task("scss-lint", function() {
         ['src/scss/**/*.scss', '!src/scss/vendor/**/*.scss']).pipe(postcss(processors, {syntax: syntax_scss}));
 });
 
+
+/* JS lint task.
+ * Checks for JS code quality.
+*/
+gulp.task("js-lint", function() {
+    return gulp.src(['src/**/*.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+});
+
 /* Start task.
  * Starts all of the above tasks.
 */
 gulp.task('start',
-    ['scss-lint', 'html', 'styles-dashboard', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'server', 'watch'],
+    ['scss-lint', 'js-lint', 'html', 'styles-dashboard', 'styles-login', 'js', 'bootstrap-js',
+        'jquery', 'assets', 'font-awesome', 'favicon', 'server', 'watch'],
         cb => cb);
 
 /* Start deploy task.
  * Deploys the app.
 */
 gulp.task('deploy',
-    ['html', 'styles-dashboard', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome'],
+    ['html', 'styles-dashboard', 'styles-login', 'js', 'bootstrap-js', 'jquery', 'assets', 'font-awesome', 'favicon'],
     cb => cb);

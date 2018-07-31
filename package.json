@@ -19,12 +19,15 @@
   "homepage": "https://github.com/JosueCuberoSanchez/PSD_Practice_1#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-eslint": "^5.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
     "postcss-reporter": "^5.0.0",
     "postcss-scss": "^2.0.0",
+    "pump": "^3.0.0",
     "stylelint": "^9.3.0"
   },
   "dependencies": {

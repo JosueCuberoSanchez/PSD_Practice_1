@@ -31,9 +31,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                    <form action="dashboard.html" class="main__form">
-                        <input type="email" class="form-control main__input" id="main__input" aria-describedby="emailHelp" placeholder="Email" required>
-                        <button type="submit" class="btn btn-primary main__button" id="main__button">
+                    <form action="./dashboard.html" class="main__form" id="main__form" onsubmit="return Validate.validateData()">
+                        <div class="form-group has-danger">
+                            <input type="email" class="form-control main__input" id="main__input--email" aria-describedby="emailHelp" placeholder="Email" required>
+                            <small id="emailHelp" class="text-danger">
+                                Invalid email, maybe your email is jo96cube@gmail.com ... just saying...
+                            </small>
+                            <input type="password" class="form-control form-control-danger main__input" id="main__input--password" placeholder="Password" required>
+                            <small id="passwordHelp" class="text-danger">
+                                Invalid password, maybe your password is 123... just saying...
+                            </small>
+                        </div>
+                        <button type="submit" class="btn btn-primary main__button mt-5" id="main__button">
                             Next
                         </button>
                     </form>
@@ -67,6 +76,6 @@
 </body>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/_main.js"></script>
 
 </html>
