@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tumblr dashboard</title>
+    <title>Tumblr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
@@ -335,106 +335,104 @@
         </div>
     </div>
 </main>
-<footer>
+<footer></footer>
 
-    <section class="container-fluid">
-        <div class="container">
-            <div class="modal pr-0" id="modal">
-                <div class="modal-dialog m-0">
-                    <div class="modal-content">
+<section class="container-fluid">
+    <div class="container">
+        <div class="modal pr-0" id="modal">
+            <div class="modal-dialog m-0">
+                <div class="modal-content">
 
-                        <header class="modal-header-custom d-flex justify-content-between">
-                            <div class="dropdown d-flex">
-                                <button class="btn btn-secondary p-0 modal-header-dropdown" type="button"
-                                        id="modal-header-dropdown" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    <strong>mikemike</strong>
-                                    <i class="fa fa-caret-down fa-black"></i>
+                    <header class="modal-header-custom d-flex justify-content-between">
+                        <div class="dropdown d-flex">
+                            <button class="btn btn-secondary p-0 modal-header-dropdown" type="button"
+                                    id="modal-header-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <strong>mikemike</strong>
+                                <i class="fa fa-caret-down fa-black"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="modal-header-dropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-cog fa-2x fa-grey"></i></a>
+                    </header>
+
+                    <main class="modal-body p-0">
+                        <div class="row modal-body-row m-0">
+                            <div class="col-6 pl-0 pr-0 modal-first-col">
+                                <div class="form-group modal-body-upload local-upload">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <div class="btn-file">
+                                                <div class="modal-body-icon-holder-local">
+                                                    <label class="modal-body-icon modal-body-icon--local" for="modal-body--local-input">
+                                                        <input type="file" id="modal-body--local-input"/>
+                                                    </label>
+                                                </div>
+                                                <p>Upload photos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img id="modal-body-uploaded--local-image" class="modal-body-uploaded-image mx-auto"/>
+                                </div>
+                            </div>
+                            <div class="col-6 pl-0 pr-0 modal-second-col">
+                                <div class="form-group modal-body-upload web-upload">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <div class="btn-file">
+                                                <div class="modal-body-icon-holder-web">
+                                                    <label class="modal-body-icon modal-body-icon--web" for="modal-body--web-input">
+                                                        <input type="file" id="modal-body--web-input"/>
+                                                    </label>
+                                                </div>
+                                                <p>Upload photos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img id="modal-body-uploaded--web-image" class="modal-body-uploaded-image mx-auto"/>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="modal-footer-custom">
+                        <div class="row">
+                            <div class="col-6 p-0">
+                                <button type="button" class="btn p-0" data-dismiss="modal"><strong>CLOSE</strong>
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="modal-header-dropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
                             </div>
-                            <a href="#"><i class="fa fa-cog fa-2x fa-grey"></i></a>
-                        </header>
-
-                        <main class="modal-body p-0">
-                            <div class="row modal-body-row m-0">
-                                <div class="col-6 pl-0 pr-0 modal-first-col">
-                                    <div class="form-group modal-body-upload local-upload">
-                                        <div class="input-group">
-                                            <div class="input-group-btn">
-                                                <div class="btn-file">
-                                                    <div class="modal-body-icon-holder-local">
-                                                        <label class="modal-body-icon modal-body-icon--local" for="modal-body--local-input">
-                                                            <input type="file" id="modal-body--local-input"/>
-                                                        </label>
-                                                    </div>
-                                                    <p>Upload photos</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img id="modal-body-uploaded--local-image" class="modal-body-uploaded-image mx-auto"/>
-                                    </div>
-                                </div>
-                                <div class="col-6 pl-0 pr-0 modal-second-col">
-                                    <div class="form-group modal-body-upload web-upload">
-                                        <div class="input-group">
-                                            <div class="input-group-btn">
-                                                <div class="btn-file">
-                                                    <div class="modal-body-icon-holder-web">
-                                                        <label class="modal-body-icon modal-body-icon--web" for="modal-body--web-input">
-                                                            <input type="file" id="modal-body--web-input"/>
-                                                        </label>
-                                                    </div>
-                                                    <p>Upload photos</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img id="modal-body-uploaded--web-image" class="modal-body-uploaded-image mx-auto"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
-
-                        <footer class="modal-footer-custom">
-                            <div class="row">
-                                <div class="col-6 p-0">
-                                    <button type="button" class="btn p-0" data-dismiss="modal"><strong>CLOSE</strong>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <div class="row">
-                                        <div class="col-xs-10 offset-xs-2 col-sm-7 offset-sm-5 col-md-8 offset-md-4 col-lg-7 offset-lg-5 p-0 d-flex justify-content-between">
-                                            <i class="fa fa-twitter fa-2x"></i>
-                                            <div class="dropdown d-flex">
-                                                <button type="button" class="btn btn-secondary modal-footer-dropdown"
-                                                        id="modal-footer-dropdown" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                    POST
-                                                    <i class="fa fa-caret-down fa-white"></i>
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="modal-footer-dropdown">
-                                                    <a class="dropdown-item" href="#">Action</a>
-                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-xs-10 offset-xs-2 col-sm-7 offset-sm-5 col-md-8 offset-md-4 col-lg-7 offset-lg-5 p-0 d-flex justify-content-between">
+                                        <i class="fa fa-twitter fa-2x"></i>
+                                        <div class="dropdown d-flex">
+                                            <button type="button" class="btn btn-secondary modal-footer-dropdown"
+                                                    id="modal-footer-dropdown" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                POST
+                                                <i class="fa fa-caret-down fa-white"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="modal-footer-dropdown">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </footer>
+                        </div>
+                    </footer>
 
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-</footer>
+    </div>
+</section>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
