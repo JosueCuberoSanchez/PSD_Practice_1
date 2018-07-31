@@ -44,7 +44,7 @@ input[type="file"] {
 
 main {
   background-color: $main-background-color;
-  padding: 37px 5.555% 0 9.3%;
+  padding: 37px 1.5% 0 9.3%;
 
   /* Main content styles */
 
@@ -116,18 +116,6 @@ main {
     padding: 33px 5.5%;
   }
 
-  .main-row__main-photo {
-    width: 100%;
-  }
-
-  .main-row__posted-content-follow-button {
-    margin-left: 4.26%;
-  }
-
-  .main-row__posted-content-icons {
-    padding-left: 6%;
-  }
-
   .main-row__posted-content-action-icons {
     margin-top: 36px;
   }
@@ -136,23 +124,15 @@ main {
 
   .aside__box {
     background-color: $main-box-background-color;
-    margin-left: 15%;
     margin-bottom: 30px;
-
-    .row {
-
-      div {
-        padding-right: 0;
-      }
-    }
   }
 
   h6 {
-    padding: 28px 11.13% 23px 10%;
+    padding: 28px $aside-padding 23px;
   }
 
   .aside__explore-tumblr {
-    padding: 4px 11.13% 24px 10%;
+    padding: 4px $aside-padding 24px;
   }
 
   .aside__profile-picture {
@@ -173,23 +153,23 @@ main {
   }
 
   .aside__frame {
-    padding: 0 11.13% 20px 10%;
+    padding: 0 $aside-padding 20px;
     border-bottom: 1px $aside-frame-border-color solid;
     margin-bottom: 14px;
   }
 
   .aside__frame-radar {
-    padding: 0 10% 15px;
+    padding: 0 $aside-padding 15px;
   }
 
   .aside__radar-photo {
     width: 100%;
-    padding: 0 10% 15px;
+    padding: 0 $aside-padding 15px;
     margin-bottom: 16px;
   }
 
   .aside__radar-info {
-    padding: 0 10% 15px;
+    padding: 0 $aside-padding 15px;
   }
 }
 
