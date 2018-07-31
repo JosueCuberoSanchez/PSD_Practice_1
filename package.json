@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/JosueCuberoSanchez/PSD_Practice_1#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
     "gulp-eslint": "^5.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",

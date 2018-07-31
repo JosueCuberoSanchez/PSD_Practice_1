@@ -5,28 +5,19 @@
  @return false if the input is invalid.
  @author Josué Cubero Sánchez.
  */
-var Validate = (function() {
+const Validate = (function() {
 
-    var email = 'jo96cube@gmail.com';
-    var password = '123';
-
-    var inputEmail = document.getElementById('main__input--email');
-    var inputPassword = document.getElementById('main__input--password');
+    const inputEmail = document.getElementById('main__input--email');
+    const inputPassword = document.getElementById('main__input--password');
 
     /*
      Function to validate user email.
      @return false if the email is invalid, true otherwise.
      @author Josué Cubero Sánchez.
      */
-    var _validateEmail = function() {
-        var enteredEmail = inputEmail.value;
-        var valid;
-        if (enteredEmail !== email) {
-            valid = false;
-        } else {
-            valid = true;
-        }
-        return valid;
+    const _validateEmail = function() {
+        const email = 'jo96cube@gmail.com';
+        return inputEmail.value === email;
     };
 
     /*
@@ -34,15 +25,9 @@ var Validate = (function() {
      @return false if the password is invalid, true otherwise.
      @author Josué Cubero Sánchez.
      */
-    var _validatePassword = function() {
-        var enteredPassword = inputPassword.value;
-        var valid;
-        if (enteredPassword !== password) {
-            valid = false;
-        } else {
-            valid = true;
-        }
-        return valid;
+    const _validatePassword = function() {
+        const password = '123';
+        return inputPassword.value === password;
     };
 
     /*
@@ -50,26 +35,17 @@ var Validate = (function() {
      @return false if the input is invalid.
      @author Josué Cubero Sánchez.
      */
-    var validateData = function() {
-        var validEmail = _validateEmail();
-        var validPassword = _validatePassword();
+    const validateData = function() {
+        const validEmail = _validateEmail();
+        const validPassword = _validatePassword();
 
         if (!(validEmail && validPassword)) {
-            if (!validEmail) {
-                inputEmail.classList.add('is-invalid');
-                document.getElementById('emailHelp').style.display = 'block';
-            } else {
-                inputEmail.classList.remove('is-invalid');
-                document.getElementById('emailHelp').style.display = 'none';
-            }
-            if (!validPassword) {
-                inputPassword.classList.add('is-invalid');
-                document.getElementById('passwordHelp').style.display = 'block';
-            } else {
-                inputPassword.classList.remove('is-invalid');
-                document.getElementById('passwordHelp').style.display = 'none';
-            }
-            return false; // return false so the form is not submitted.
+            inputEmail.classList.add('is-invalid');
+            document.getElementById('emailHelp').style.display = 'block';
+            inputPassword.classList.add('is-invalid');
+            document.getElementById('passwordHelp').style.display = 'block';
+        } else {
+            window.location.href = 'dashboard.html';
         }
     };
 
@@ -78,3 +54,11 @@ var Validate = (function() {
     };
 
 })();
+
+/*
+ Listener for main button on click.
+ @author Josué Cubero Sánchez.
+ */
+document.getElementById('main__button').addEventListener('click', function() {
+    Validate.validateData();
+});

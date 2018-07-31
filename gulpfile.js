@@ -13,6 +13,7 @@ let syntax_scss = require('postcss-scss');
 let uglify = require('gulp-uglify');
 let pump = require('pump');
 let eslint = require('gulp-eslint');
+let babel = require('gulp-babel');
 
 /*gulp.task(
     name : String,
@@ -60,20 +61,19 @@ gulp.task('html', () => {
 /* JS task.
  * Copies and uglifies JS files to build.
 */
-gulp.task('js', function (cb) {
-    pump([
-            gulp.src('src/**/*.js'),
-            uglify(),
-            gulp.dest('build/')
-        ],
-        cb
-    );
+gulp.task('js', () => {
+    return gulp.src('src/**/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/'))
 });
 
 /* Bootstrap JS task.
  * Copies bootstrap javascript files to build.
 */
-gulp.task('bootstrap-js', function() {
+gulp.task('bootstrap-js', () => {
     return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
         .pipe(gulp.dest('build/js/'))});
 
@@ -94,7 +94,7 @@ gulp.task('assets', () => {
 /* Font awesome task.
  * Copies fonts to build.
 */
-gulp.task('font-awesome', function() {
+gulp.task('font-awesome', () => {
     return gulp.src('node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('build/fonts'))
 });
@@ -102,7 +102,7 @@ gulp.task('font-awesome', function() {
 /* Favicon task.
  * Copies favicon to build.
 */
-gulp.task('favicon', function() {
+gulp.task('favicon', () => {
     return gulp.src('favicon.ico')
         .pipe(gulp.dest('build/'))
 });
@@ -132,7 +132,7 @@ gulp.task('server', () => {
 /* SCSS lint task.
  * Checks for SCSS code quality.
 */
-gulp.task("scss-lint", function() {
+gulp.task("scss-lint", () => {
 
     // Stylelint config rules
     const stylelintConfig = {
@@ -257,7 +257,7 @@ gulp.task("scss-lint", function() {
 /* JS lint task.
  * Checks for JS code quality.
 */
-gulp.task("js-lint", function() {
+gulp.task("js-lint", () => {
     return gulp.src(['src/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format())

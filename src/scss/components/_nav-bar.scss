@@ -4,7 +4,7 @@ nav {
   background-color: $nav-background-color;
 
   .nav__menu-icon--logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .nav__search-bar {
@@ -16,10 +16,6 @@ nav {
     background-color: $nav-searchbar-background-color;
     color: $nav-searchbar-text-color;
     box-shadow: none;
-  }
-
-  .nav__menu-icons {
-    padding-right: 15%;
   }
 
   .nav__menu-hamburger-text {
