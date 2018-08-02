@@ -1,0 +1,97 @@
+/* Aside styles */
+
+.aside {
+
+  &__box {
+    background-color: $main-box-background-color;
+    margin-bottom: 30px;
+  }
+
+  &__box-title {
+    padding: 28px $aside-padding 23px;
+  }
+
+  &__explore-tumblr {
+    padding: 4px $aside-padding 24px;
+  }
+
+  &__profile-picture {
+    padding-top: 8px;
+  }
+
+  &__username {
+    color: $aside-name-color;
+  }
+
+  &__blogname {
+    color: $aside-blogname-color;
+    font-size: 0.9rem;
+  }
+
+  &__plus-symbol {
+    padding-left: 3.1%;
+  }
+
+  &__frame {
+    padding: 0 $aside-padding 20px;
+    border-bottom: 1px $aside-frame-border-color solid;
+    margin-bottom: 14px;
+  }
+
+  &__frame-radar {
+    padding: 0 $aside-padding 15px;
+  }
+
+  &__radar-photo {
+    width: 100%;
+    padding: 0 $aside-padding 15px;
+    margin-bottom: 16px;
+  }
+
+  &__radar-info {
+    padding: 0 $aside-padding 15px;
+  }
+}
+
+// Media quieries for responsiveness
+
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+
+  .aside {
+
+    &__profile-picture {
+      width: 90%;
+      padding-top: 4px;
+    }
+
+    &__username,
+    &__explore-tumblr,
+    &__box-title {
+      font-size: 0.8rem;
+    }
+
+    &__blogname {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .aside {
+
+    &__box {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .aside {
+
+    &__frame-info {
+      margin-left: 6%;
+    }
+  }
+}

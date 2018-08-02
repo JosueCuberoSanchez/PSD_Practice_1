@@ -1,48 +1,43 @@
 /* Nav bar styles */
 
-nav {
+.navbar {
   background-color: $nav-background-color;
 
-  .nav__menu-icon--logo {
+  &__menu-icon--logo {
     font-size: 1.7rem;
   }
 
-  .nav__search-bar {
+  &__search-bar {
     background-color: $nav-searchbar-background-color;
     color: $nav-searchbar-text-color;
   }
 
-  .nav__search-bar:focus {
+  &__search-bar:focus {
     background-color: $nav-searchbar-background-color;
     color: $nav-searchbar-text-color;
     box-shadow: none;
   }
 
-  .nav__menu-hamburger-text {
+  &__menu-hamburger-text {
     font-size: 0.55rem;
   }
 
-  .nav__menu-pen-box {
+  &__menu-pen-box {
     background: $button-color no-repeat center;
     border-radius: 5px;
     width: 27px;
+  }
 
-    button {
-      width: 100%;
-      height: 100%;
-
-      .nav__menu-icon--pen {
-        color: $nav-pen-color;
-      }
-    }
+  &__menu-icon--pen {
+    color: $nav-pen-color;
   }
 }
 
 @media screen and (max-width: 575px) {
 
-  nav {
+  .navbar {
 
-    .nav__menu-pen-box {
+    &__menu-pen-box {
       width: 40px;
     }
   }

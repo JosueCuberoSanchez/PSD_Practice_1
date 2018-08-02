@@ -1,0 +1,118 @@
+// Main section styles
+
+.main-row {
+  margin-bottom: 30px;
+
+  &__post-content-box {
+    background-color: $main-box-background-color;
+    padding: 22px 5.5% 27px;
+  }
+
+  &__post-content-box__option {
+    text-align: center;
+  }
+
+  &__post-content-box-option-link {
+    height: 35px;
+    display: inline-block;
+  }
+
+  &__post-content-box-option {
+    background-image: url(../../assets/img/sprite-mixins.png);
+    display: inline-block;
+    width: $small-sprite;
+    height: $small-sprite;
+  }
+
+  &__post-content-box--text {
+
+    @include sprite(0, true);
+  }
+
+  &__post-content-box--photo {
+
+    @include sprite(1, true);
+  }
+
+  &__post-content-box--quote {
+
+    @include sprite(2, true);
+  }
+
+  &__post-content-box--link {
+
+    @include sprite(3, true);
+  }
+
+  &__post-content-box--chat {
+
+    @include sprite(4, true);
+  }
+
+  &__post-content-box--audio {
+
+    @include sprite(5, true);
+  }
+
+  &__post-content-box--video {
+
+    @include sprite(6, true);
+  }
+
+  &__posted-content-box {
+    background-color: $main-box-background-color;
+  }
+
+  &__posted-content-info {
+    padding: 33px 5.5%;
+  }
+
+  &__posted-content-action-icons {
+    margin-top: 36px;
+  }
+}
+
+// Media quieries for responsiveness
+
+@media screen and (max-width: 992px) {
+
+  .main-row {
+    padding-left: 3%;
+
+    &__posted-content-info {
+      padding: 33px 2%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-row {
+
+    &__profile-pic {
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 10px;
+
+      img {
+        width: 10%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .main-row {
+
+    &__content {
+      width: 100%;
+    }
+
+    &__post-content-box {
+      padding-right: 1px;
+      padding-left: 1px;
+    }
+  }
+}
